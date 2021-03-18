@@ -5,10 +5,16 @@ import json
 app = Flask(__name__)
 
 
-desenvolvedores = [{'id':0,'name': 'Mauricio',
-'Habilidade':['html', 'CSS']},
-{'id':1, 'name':'Pedro', 'Habilidade':['flask', 'Python']}
-                   ]
+desenvolvedores = [
+    {
+        'id':0,'name': 'Mauricio',
+        'Habilidade':['html', 'CSS']
+    },
+    {
+        'id':1, 'name':'Pedro',
+        'Habilidade':['flask', 'Python']
+    }
+]
 
 #Retorna um desenvolvedor pelo ID, também modifca e exlui
 @app.route('/dev/<int:id>/', methods=['GET', 'PUT', 'DELETE'])
